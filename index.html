@@ -2,9 +2,9 @@
 <html>
 <body>
 <div align="center">
-<h3>Riddle</h3>
+<h3>Password:</h3>
 
-<input type="text" id="myText" value="">
+<input style="border:thin double green" type="text" id="myText" value="">
 
 
 <button onclick="myFunction()">Confirm</button>
@@ -16,10 +16,10 @@
     var i = 0;
 var myFunction = function() {
     var x = document.getElementById("myText").value;
-    if(x === "asylum"){
-    document.getElementById("answer").innerHTML = x;
-    }else if(i > 3){
+    if(i > 3){
     document.getElementById("wrong").innerHTML = "You lost";    
+    }else if(x === "lobotomy"){
+    document.getElementById("answer").innerHTML = x;
     }
     i++;
     console.log(i);

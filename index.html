@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div align="center">
+<h3>Riddle</h3>
+
+<input type="text" id="myText" value="">
+
+
+<button onclick="myFunction()">Confirm</button>
+
+<p id="answer"></p>
+<p id="wrong"></p>
+</div>
+<script>
+    var i = 0;
+var myFunction = function() {
+    var x = document.getElementById("myText").value;
+    if(x === "asylum"){
+    document.getElementById("answer").innerHTML = x;
+    }else if(i > 3){
+    document.getElementById("wrong").innerHTML = "You lost";    
+    }
+    i++;
+    console.log(i);
+    
+};
+</script>
+
+</body>
+</html>

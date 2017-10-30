@@ -2,7 +2,8 @@
 <html>
 <body>
 <div align="center">
-<h3>Password:</h3>
+<h3>Treatment:</h3>
+    <p id="count">Tries before lockdown</p>
 
 <input style="border:thin double green" type="text" id="myText" value="">
 
@@ -13,17 +14,19 @@
 <p id="wrong"></p>
 </div>
 <script>
-    var i = 0;
+    var i = 4;
+    
 var myFunction = function() {
     var x = document.getElementById("myText").value;
-    if(i > 3){
+    if(i < 1){
     document.getElementById("wrong").innerHTML = "You lost";    
     }else if(x === "lobotomy"){
-    document.getElementById("answer").innerHTML = x;
+    document.getElementById("answer").innerHTML = "You Won! Congratulation!";
+    document.getElementById(myFunction).disabled = true;    
     }
-    i++;
+    i--;
     console.log(i);
-    
+    document.getElementById("count").innerHTML = i;
 };
 </script>
 
